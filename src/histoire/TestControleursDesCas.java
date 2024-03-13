@@ -18,7 +18,7 @@ public class TestControleursDesCas {
 
 		//TODO decommenter les cas au fur et a mesure que vous avancez dans le TP
 		
-		Village village = new Village("le village des irrÃ©ductibles", 10, 5);
+		Village village = new Village("le village des irréductibles", 10, 5);
 		Chef abraracourcix = new Chef("Abraracourcix", 10, village);
 		village.setChef(abraracourcix);
 		Gaulois asterix = new Gaulois("Asterix", 6);
@@ -29,16 +29,16 @@ public class TestControleursDesCas {
 
 		// Cas 2 : Emmenager
 
-//		System.out.println("Cas 2 : Emmenager");
-//		ControlEmmenager controlEmmenager = new ControlEmmenager(village);
-//		controlEmmenager.ajouterDruide("Panoramix", 10, 5, 7);
-//		controlEmmenager.ajouterGaulois("Asterix", 6);
-//		controlEmmenager.ajouterGaulois("Obelix", 12);
-//		String[] nomsVillageois = controlAfficherVillage.donnerNomsVillageois();
-//		System.out.println("Les villageois sont : ");
-//		for (String villageois : nomsVillageois) {
-//			System.out.println("- " + villageois);
-//		}
+		System.out.println("Cas 2 : Emmenager");
+		ControlEmmenager controlEmmenager = new ControlEmmenager(village);
+		controlEmmenager.ajouterDruide("Panoramix", 10, 5, 7);
+		controlEmmenager.ajouterGaulois("Asterix", 6);
+		controlEmmenager.ajouterGaulois("Obelix", 12);
+		String[] nomsVillageois = controlAfficherVillage.donnerNomsVillageois();
+		System.out.println("Les villageois sont : ");
+		for (String villageois : nomsVillageois) {
+			System.out.println("- " + villageois);
+		}
 		
 //		Sortie Console :
 //		Cas 2 : Emmenager
