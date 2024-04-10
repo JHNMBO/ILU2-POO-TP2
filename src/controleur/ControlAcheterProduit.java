@@ -17,7 +17,7 @@ public class ControlAcheterProduit {
 		this.controlTrouverEtalVendeur = controlTrouverEtalVendeur;
 	}
 
-	//TODO a completer
+	//Complete
 	public Etal trouverEtalVendeur(String nomVendeur) {
 		return controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
 	}

@@ -1,12 +1,10 @@
 package frontiere;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 import controleur.ControlAcheterProduit;
-import personnages.Gaulois;
+import personnages.Gaulois; // Pas de Gaulois ni Etal
 import villagegaulois.Etal;
-import villagegaulois.Village;
 
 public class BoundaryAcheterProduit {
 	private Scanner scan = new Scanner(System.in);
@@ -17,7 +15,7 @@ public class BoundaryAcheterProduit {
 	}
 
 	public void acheterProduit(String nomAcheteur) {
-		// TODO à completer
+		//Complete
 		if(!(controlAcheterProduit.verifierIdentite(nomAcheteur))) {
 			System.out.println("Je suis désole " + nomAcheteur + 
 					" mais il faut être un habitant de notre village pour commercer ici");
