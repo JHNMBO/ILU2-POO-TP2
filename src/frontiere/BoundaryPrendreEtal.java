@@ -14,24 +14,25 @@ public class BoundaryPrendreEtal {
 
 	public void prendreEtal(String nomVendeur) {
 		if (!controlPrendreEtal.verifierIdentite(nomVendeur)) {
-			System.out.println("Je suis désolé " + nomVendeur + " mais il faut être un habitant de notre village pour commercer ici.");
+			System.out.println("Je suis dï¿½solï¿½ " + nomVendeur + " mais il faut ï¿½tre un habitant de notre village pour commercer ici.");
 		} else {
-			System.out.println("Bonjour " + nomVendeur + ", je vais regarder si je peux vous trouver un étal.");
+			System.out.println("Bonjour " + nomVendeur + ", je vais regarder si je peux vous trouver un ï¿½tal.");
 			if (!controlPrendreEtal.resteEtals()) {
-				System.out.println("Désolé " + nomVendeur + " je n'ai plus d'étal qui ne soit pas déjà occupé.");
+				System.out.println("Dï¿½solï¿½ " + nomVendeur + " je n'ai plus d'ï¿½tal qui ne soit pas dï¿½jï¿½ occupï¿½.");
 			} else {
+				System.out.println("C'est parfait, il me reste un ï¿½tal pour vous !");
 				installerVendeur(nomVendeur);
-				System.out.println("C'est parfait, il me reste un étal pour vous !");
-				String produit;
-				int nbProduit = 0;
-				StringBuilder question = new StringBuilder();
-				System.out.println("Il me faudrait quelques renseignements :\n");
-				produit = Clavier.entrerChaine("Quel produit souhaitez vous vendre ?");
 			}
 		}
 	}
 
 	private void installerVendeur(String nomVendeur) {
-		//TODO a completer
+		String produit;
+		int nbProduit = 0;
+		System.out.println("Il me faudrait quelques renseignements :\n");
+		produit = Clavier.entrerChaine("Quel produit souhaitez-vous vendre ?");
+		nbProduit = Clavier.entrerEntier("Combien souhaitez-vous en vendre ?");
+		int numeroEtal = controlPrendreEtal.prendreEtal(nomVendeur, produit, nbProduit);
+		System.out.println("Le vendeur " + nomVendeur + " s'est installÃ© Ã  l'Ã©tal nÂ°" + numeroEtal + "\n");
 	}
 }
